@@ -1,0 +1,56 @@
+<div class="app-container">
+  <h1>Welcome Evertone test1</h1>
+  <app-my-new-component></app-my-new-component>  
+</div>
+<div>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div>
+  <h1>{{ title }}</h1>
+  <button (click)="handleClick()">Click Me</button>
+</div>
+<div>
+  <h1>This is property binding example:</h1>
+  <button [disabled]="isDisabled">{{ buttonText }}</button>
+</div>
+<div>
+  <h1>This is ngFor and ngIf Example</h1>
+  <ul>
+    <li ngFor="let item of items">{{ items }}</li>
+  </ul>
+
+  <div ngIf="isLoggedIn">
+    <p>You are logged in!</p>
+  </div>
+  <div ngIf="!isLoggedIn">
+    <p>Please log in to continue.</p>
+  </div>
+</div>
+<div>
+  <h1>This one is Toggle Visibility and Apply Classes Dynamically:</h1>
+
+  <button (click)="toggleVisibility()">Toggle Visibility</button>
+  <button (click)="toggleSpecial()">Toggle Special Class</button>
+
+  <div ngIf="isVisible">
+    <p ngIf="isSpecial" class="special-text">This text has a special class applied!</p>
+    <p ngIf="!isSpecial">This text does not have the special class.</p>
+  </div>
+  <div>
+    <h1>This is Pagination Example:</h1>
+  
+    <ul>
+      <li ngFor="let item of paginatedData">{{ items }}</li>
+    </ul>
+  
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= data.length">Next</button>
+  
+    <p>Page {{ currentPage }} of {{ Math.ceil(data.length / itemsPerPage) }}</p>
+  </div>
+  
+  
+  
+  
+  

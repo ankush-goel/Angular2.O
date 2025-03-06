@@ -1,0 +1,10 @@
+.active-class {
+    color: rgb(0, 195, 255);
+    font-weight: bold;
+  }
+  
+.inactive-class {
+    color: rgb(255, 0, 251);
+    font-weight: normal;
+  }
+  
